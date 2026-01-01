@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import Unocss from '@unocss/vite'
 
 export default defineConfig({
+  base: '/',
   plugins: [
     react(),
     Unocss(),
