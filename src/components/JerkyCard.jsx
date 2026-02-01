@@ -89,8 +89,7 @@ export default function JerkyCard({
           </div>
 
           <p className="text-xs text-gray-500 text-center mt-3 hidden md:block">Hover away to close</p>
-          <p className="text-xs text-gray-500 text-center mt-3 md:hidden">Tap
-          <p className="text-xs text-gray-500 text-center mt-3">Hover away to close</p>
+          <p className="text-xs text-gray-500 text-center mt-3 md:hidden">Tap to close</p>
         </div>
       </div>
     </div>
