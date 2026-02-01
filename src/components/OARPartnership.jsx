@@ -2,7 +2,7 @@ export default function OARPartnership() {
   return (
     <section
       id="oar"
-      className="px-6 py-20 bg-gradient-to-b from-stone-50 to-white animate-fade-in"
+      className="px-6 py-20 bg-gradient-to-b from-green-50 to-white animate-fade-in"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
