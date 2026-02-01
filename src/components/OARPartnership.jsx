@@ -91,38 +91,6 @@ export default function OARPartnership() {
             </ul>
           </div>
         </div>
-
-        {/* Contact Info */}
-        <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-12">
-          <h3 className="text-2xl font-bold text-center mb-12 text-green-700">Get in Contact With Us</h3>
-          
-          <div className="grid md:grid-cols-2 gap-12 mb-8">
-            <div className="text-center">
-              <p className="text-sm uppercase tracking-widest text-gray-500 font-semibold mb-2">Email</p>
-              <a href="mailto:halal_homestead@outlook.com" className="text-xl font-bold text-green-700 hover:text-green-600 transition-colors">
-                halal_homestead@outlook.com
-              </a>
-            </div>
-            <div className="text-center">
-              <p className="text-sm uppercase tracking-widest text-gray-500 font-semibold mb-2">Phone</p>
-              <a href="tel:7039325156" className="text-xl font-bold text-green-700 hover:text-green-600 transition-colors">
-                (703) 932-5156
-              </a>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <p className="text-sm uppercase tracking-widest text-gray-500 font-semibold mb-2">Follow Us</p>
-            <a href="https://instagram.com/halalhomestead" className="text-lg font-bold text-green-700 hover:text-green-600 transition-colors">
-              Instagram: @halalhomestead
-            </a>
-          </div>
-
-          <div className="mt-8 pt-8 border-t border-green-200 text-center">
-            <p className="text-gray-700 font-semibold mb-2">Fill out our Google Form and create change now!</p>
-            <p className="text-sm text-gray-600">Together, we're rebuilding lives and strengthening our community.</p>
-          </div>
-        </div>
       </div>
     </section>
   )
