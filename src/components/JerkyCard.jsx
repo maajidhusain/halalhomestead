@@ -15,7 +15,7 @@ export default function JerkyCard({
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
       onClick={() => setIsFlipped(!isFlipped)}
-      className="h-96 md:h-96 cursor-pointer"
+      className="h-auto sm:h-96 cursor-pointer min-h-96"
       style={{ perspective: '1000px' }}
     >
       <div
@@ -47,12 +47,12 @@ export default function JerkyCard({
 
         {/* Back - Nutrition & Ingredients */}
         <div
-          className="absolute w-full h-full bg-white rounded-xl overflow-y-auto shadow p-4 md:p-6 flex flex-col"
+          className="absolute w-full h-full bg-white rounded-xl shadow p-3 sm:p-6 flex flex-col overflow-hidden"
           style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
         >
-          <div className="flex-1">
+          <div className="flex-1 overflow-y-auto">
             {/* Nutrition Facts */}
-            <div className="border-2 border-black p-2 md:p-3 text-sm mb-4">
+            <div className="border-2 border-black p-2 md:p-3 text-sm mb-3">
               <h4 className="text-xs md:text-sm font-black border-b-2 border-black pb-1 mb-2">
                 Nutrition Facts
               </h4>
@@ -70,26 +70,26 @@ export default function JerkyCard({
                       r.indent ? 'pl-4' : ''
                     } ${r.bold ? 'font-bold' : ''}`}
                   >
-                    <span>{r.label}</span>
-                    <span>{r.value}</span>
+                    <span className="flex-shrink-0">{r.label}</span>
+                    <span className="flex-shrink-0 ml-2">{r.value}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Ingredients */}
-            <div className="text-xs md:text-xs space-y-2">
-              <p>
+            <div className="text-xs space-y-2 mb-3">
+              <p className="break-words">
                 <span className="font-semibold">Ingredients:</span> {ingredients}
               </p>
-              <p className="font-medium">
+              <p className="font-medium break-words">
                 Contains: {contains}
               </p>
             </div>
           </div>
 
-          <p className="text-xs text-gray-500 text-center mt-3 hidden md:block">Hover away to close</p>
-          <p className="text-xs text-gray-500 text-center mt-3 md:hidden">Tap to close</p>
+          <p className="text-xs text-gray-500 text-center mt-auto hidden md:block">Hover away to close</p>
+          <p className="text-xs text-gray-500 text-center mt-auto md:hidden">Tap to close</p>
         </div>
       </div>
     </div>
