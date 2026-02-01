@@ -14,7 +14,8 @@ export default function JerkyCard({
     <div
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
-      className="h-96"
+      onClick={() => setIsFlipped(!isFlipped)}
+      className="h-96 md:h-96 cursor-pointer"
       style={{ perspective: '1000px' }}
     >
       <div
@@ -34,24 +35,24 @@ export default function JerkyCard({
             alt={title}
             className="h-56 w-full object-cover transition-transform duration-500 hover:scale-105"
           />
-          <div className="p-6 flex flex-col justify-between h-40">
+          <div className="p-4 md:p-6 flex flex-col justify-between h-40">
             <div>
-              <h3 className="text-xl font-bold mb-3">{title}</h3>
-              <p className="italic text-gray-600 text-sm">"{quote}"</p>
+              <h3 className="text-lg md:text-xl font-bold mb-3">{title}</h3>
+              <p className="italic text-gray-600 text-xs md:text-sm">"{quote}"</p>
             </div>
-            <p className="text-xs text-gray-500 text-center">Hover to see details</p>
+            <p className="text-xs text-gray-500 text-center hidden md:block">Hover to see details</p>
+            <p className="text-xs text-gray-500 text-center md:hidden">Tap to see details</p>
           </div>
         </div>
 
         {/* Back - Nutrition & Ingredients */}
-        <div
-          className="absolute w-full h-full bg-white rounded-xl overflow-y-auto shadow p-6 flex flex-col"
+        <div4 md:p-6 flex flex-col"
           style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
         >
           <div className="flex-1">
             {/* Nutrition Facts */}
-            <div className="border-2 border-black p-3 text-sm mb-4">
-              <h4 className="text-sm font-black border-b-2 border-black pb-1 mb-2">
+            <div className="border-2 border-black p-2 md:p-3 text-sm mb-4">
+              <h4 className="text-xs md:text-sm font-black border-b-2 border-black pb-1 mb-2">
                 Nutrition Facts
               </h4>
 
@@ -76,7 +77,7 @@ export default function JerkyCard({
             </div>
 
             {/* Ingredients */}
-            <div className="text-xs space-y-2">
+            <div className="text-xs md:text-xs space-y-2">
               <p>
                 <span className="font-semibold">Ingredients:</span> {ingredients}
               </p>
@@ -86,6 +87,8 @@ export default function JerkyCard({
             </div>
           </div>
 
+          <p className="text-xs text-gray-500 text-center mt-3 hidden md:block">Hover away to close</p>
+          <p className="text-xs text-gray-500 text-center mt-3 md:hidden">Tap
           <p className="text-xs text-gray-500 text-center mt-3">Hover away to close</p>
         </div>
       </div>

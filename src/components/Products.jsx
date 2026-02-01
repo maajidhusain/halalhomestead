@@ -19,7 +19,7 @@ export default function Products() {
         </p>
       </div>
 
-      <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         <JerkyCard
           image={mango}
           title="Mango Habanero Jerky"
