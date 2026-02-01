@@ -15,19 +15,20 @@ export default function JerkyCard({
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
       onClick={() => setIsFlipped(!isFlipped)}
-      className="h-auto sm:h-96 cursor-pointer min-h-96"
+      className="cursor-pointer"
       style={{ perspective: '1000px' }}
     >
       <div
-        className="relative w-full h-full transition-transform duration-500"
+        className="relative w-full transition-transform duration-500"
         style={{
           transformStyle: 'preserve-3d',
           transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
+          minHeight: isFlipped ? '500px' : '380px',
         }}
       >
         {/* Front - Image & Quote */}
-        <div
-          className="absolute w-full h-full bg-white rounded-xl overflow-hidden shadow"
+        <divbg-white rounded-xl overflow-hidden shadow flex flex-col"
+          style={{ backfaceVisibility: 'hidden', minHeight: '380px-white rounded-xl overflow-hidden shadow"
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img
@@ -47,8 +48,8 @@ export default function JerkyCard({
 
         {/* Back - Nutrition & Ingredients */}
         <div
-          className="absolute w-full h-full bg-white rounded-xl shadow p-3 sm:p-6 flex flex-col overflow-hidden"
-          style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+          className="absolute w-full bg-white rounded-xl shadow p-3 sm:p-6 flex flex-col"
+          style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)', minHeight: '500px' }}
         >
           <div className="flex-1 overflow-y-auto">
             {/* Nutrition Facts */}
