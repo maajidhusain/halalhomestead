@@ -46,7 +46,8 @@ export default function JerkyCard({
         </div>
 
         {/* Back - Nutrition & Ingredients */}
-        <div4 md:p-6 flex flex-col"
+        <div
+          className="absolute w-full h-full bg-white rounded-xl overflow-y-auto shadow p-4 md:p-6 flex flex-col"
           style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
         >
           <div className="flex-1">
